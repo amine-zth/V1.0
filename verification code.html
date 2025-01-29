@@ -1,0 +1,75 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: #2c2f38;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: #3a3f47;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #00ff00;
+            width: 400px;
+        }
+        .card h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .otp-inputs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .otp-inputs input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 24px;
+            border: 2px solid #fff;
+            background-color: #2c2f38;
+            color: #fff;
+        }
+        .resend {
+            color: #00ff00;
+            margin-bottom: 20px;
+        }
+        .resend a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        .verify-button {
+            background-color: #fff;
+            color: #2c2f38;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>OTP VERIFICATION</h1>
+        <div class="otp-inputs">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+        <div class="resend">
+            don't get the code ? <a href="#">Resende</a>
+        </div>
+        <button class="verify-button">veriffy</button>
+    </div>
+</body>
+</html>

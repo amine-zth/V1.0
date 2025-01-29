@@ -1,0 +1,110 @@
+<html></html>
+<head>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+        .container input[type="text"]:focus,
+        .container input[type="password"]:focus {
+            outline: none;
+            border-color: #9147ff;
+        }
+        .container .password-container {
+            position: relative;
+        }
+        .container .password-container input[type="password"] {
+            padding-right: 40px;
+        }
+        .container .password-container .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #ffffff;
+        }
+        .container .trouble-logging-in {
+            color: #9147ff;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .container .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            border: none;
+            border-radius: 4px;
+            color: #666;
+            cursor: not-allowed;
+        }
+        .container .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container .signup-link a {
+            color: #9147ff;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        
+        <label for="password">Password</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password">
+            <i class="fas fa-eye toggle-password"></i>
+        </div>
+        
+        <a href="#" class="trouble-logging-in">Trouble logging in?</a>
+        
+        <button class="login-button" disabled>Log In</button>
+        
+        <div class="signup-link">
+            <span>Don't have an account? <a href="information email.html">Sign up</a></span>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.toggle-password').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>
